@@ -5,7 +5,7 @@ import Registrar from "./components/Registrar"
 function Home() {
      return(
          <>
-            <div className="flex justify-center items-center mt-28 gap-2">
+            <div className="flex justify-center items-center gap-2">
 
                         {/* Education */}
 
