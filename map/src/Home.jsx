@@ -512,19 +512,21 @@ function Home() {
         </div>
 
         {/* only exit so that the map is in left position */}
-        <div className="w-[200px] mt-5 h-[550] hidden lg:block text-sm ">
+        <div className="w-[200px] mt-12 max-h-[550] hidden lg:block text-[13px] ">
             <div className="flex justify-center flex-col mr-5 -ml-6 gap-3">
 
-            <p className="text-gray-400">Use the <b>mouse scroll 🖱️</b> to zoom in and out on the map for a customized view.</p>
+            <p className="text-gray-400">Use the <b className="text-gray-500">mouse scroll 🖱️</b> to zoom in and out on the map for a customized view.</p>
 
                         
-            <p className="text-gray-400">Use the <b>search bar ⌕</b> in the top right corner to easily find buildings/facilities. Select a result to navigate.</p>   
+            <p className="text-gray-400">Use the <b className="text-gray-500">search bar ⌕</b> in the top right corner to easily find buildings/facilities. Select a result to navigate.</p>   
 
-            <p className="text-gray-400">Click the <b className="text-green-300">'Zoom In +'</b> button to enlarge the map for a detailed view.</p>
+            <p className="text-gray-400">Click the <b className="text-green-400">'Zoom In +'</b> button to enlarge the map for a detailed view.</p>
 
-            <p className="text-gray-400">Click the <b className="text-red-300">'Zoom Out −'</b> button to reduce the map size for a wider view.</p>
+            <p className="text-gray-400">Click the <b className="text-red-400">'Zoom Out −'</b> button to reduce the map size for a wider view.</p>
 
-             <p className="text-gray-400">Click the <b className="text-sky-300">'Reset ↺'</b> button to return the map to its default view.</p>
+             <p className="text-gray-400">Click the <b className="text-sky-400">'Reset ↺'</b> button to return the map to its default view.</p>
+
+             <p className="text-gray-400">Click on <b className="text-gray-500">'Building 🏢'</b> to explore and navigate through the rooms.</p>
 
             </div>
        
