@@ -5,6 +5,8 @@ import { IoIosSearch } from "react-icons/io";
 import { FaRegBuilding } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { PiMouseScrollFill } from "react-icons/pi";
+import { FaPlus, FaMinus  } from "react-icons/fa6";
+import { RxReset } from "react-icons/rx";
 
 function Home() {
     const [zoomLevel, setZoomLevel] = useState(1); // Zoom level
@@ -102,7 +104,7 @@ function Home() {
         <div className="flex justify-center gap-10 items-center">
 
       {/* this the svg div */}
-      <div className="relative bg-white overflow-hidden h-[500px] w-[1000px] my-5 flex justify-center items-center border border-slate-500 cursor-grab active:cursor-grabbing rounded ml-5"
+      <div className="relative bg-white overflow-hidden h-[500px] w-[1000px] my-5 flex justify-center items-center border border-slate-500 cursor-grab active:cursor-grabbing rounded mx-4 lg:ml-5"
         onWheel={handleWheel}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -446,21 +448,21 @@ function Home() {
       <div className="absolute bottom-4 left-4 flex flex-col gap-2 text-base">
                 <button
                 onClick={() => setZoomLevel(Math.min(zoomLevel + 0.1, 5))}
-                className="px-3 py-1 bg-green-500 text-white rounded shadow-sm hover:bg-green-600  shadow-slate-600"
+                className="w-10 py-2 flex justify-center items-center opacity-50 hover:opacity-100 bg-green-500 text-white rounded shadow-sm hover:bg-green-600  shadow-slate-600"
                 >
-                Zoom In
+                <FaPlus/>
                 </button>
                 <button
                 onClick={() => setZoomLevel(Math.max(zoomLevel - 0.1, 0.5))}
-                className="px-3 py-1 bg-red-500 text-white rounded shadow-sm shadow-slate-600 hover:bg-red-600"
+                className="w-10 py-2 flex justify-center items-center opacity-50 hover:opacity-100 bg-red-500 text-white rounded shadow-sm shadow-slate-600 hover:bg-red-600"
                 >
-                Zoom Out
+               <FaMinus/>
                 </button>
                 <button
                 onClick={resetView}
-                className=" px-3 py-1 bg-blue-500 text-white rounded shadow-sm shadow-zinc-600 hover:bg-blue-600"
+                className=" w-10 py-2 flex justify-center items-center opacity-50 hover:opacity-100 bg-blue-500 text-white rounded shadow-sm shadow-zinc-600 hover:bg-blue-600"
             >
-                Reset
+              < RxReset/>
             </button>     
       </div>
      
@@ -511,18 +513,18 @@ function Home() {
 
         {/* only exit so that the map is in left position */}
         <div className="w-[200px] mt-5 h-[550] hidden lg:block text-sm ">
-            <div className="flex justify-center flex-col mr-5 -ml-4 gap-3">
+            <div className="flex justify-center flex-col mr-5 -ml-6 gap-3">
 
-            <p className="text-gray-400">Use the <b>mouse scroll</b> to zoom in and out on the map for a customized view.</p>
+            <p className="text-gray-400">Use the <b>mouse scroll 🖱️</b> to zoom in and out on the map for a customized view.</p>
 
                         
-            <p className="text-gray-400">Use the <b>search bar</b> in the top right corner to easily find buildings/facilities. Select a result to navigate.</p>   
+            <p className="text-gray-400">Use the <b>search bar ⌕</b> in the top right corner to easily find buildings/facilities. Select a result to navigate.</p>   
 
-            <p className="text-gray-400">Click the <b className="text-green-300">'Zoom In'</b> button to enlarge the map for a detailed view.</p>
+            <p className="text-gray-400">Click the <b className="text-green-300">'Zoom In +'</b> button to enlarge the map for a detailed view.</p>
 
-            <p className="text-gray-400">Click the <b className="text-red-300">'Zoom Out'</b> button to reduce the map size for a wider view.</p>
+            <p className="text-gray-400">Click the <b className="text-red-300">'Zoom Out −'</b> button to reduce the map size for a wider view.</p>
 
-             <p className="text-gray-400">Click the <b className="text-sky-300">'Reset'</b> button to return the map to its default view.</p>
+             <p className="text-gray-400">Click the <b className="text-sky-300">'Reset ↺'</b> button to return the map to its default view.</p>
 
             </div>
        
